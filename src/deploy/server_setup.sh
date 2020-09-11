@@ -3,7 +3,7 @@
 set -e
 
 # TODO: Set to URL of git repo.
-PROJECT_GIT_URL='https://github.com/gustavoghp87/MiseriScraping.git'
+PROJECT_GIT_URL='https://github.com/gustavoghp87/django-rest-api.git'
 
 PROJECT_BASE_PATH='/usr/local/apps'
 VIRTUALENV_BASE_PATH='/usr/local/virtualenvs'
@@ -25,7 +25,7 @@ python3 -m venv $VIRTUALENV_BASE_PATH/profiles_api
 $VIRTUALENV_BASE_PATH/profiles_api/bin/pip install -r $PROJECT_BASE_PATH/src/requirements.txt
 
 # Run migrations
-cd $PROJECT_BASE_PATH/MiseriScraping/src
+cd $PROJECT_BASE_PATH/django-rest-api/src
 
 # Setup Supervisor to run our uwsgi process.
 cp $PROJECT_BASE_PATH/deploy/supervisor_profiles_api.conf /etc/supervisor/conf.d/profiles_api.conf
